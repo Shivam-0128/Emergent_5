@@ -1,0 +1,83 @@
+{
+  "theme_strategy": "Light theme focused on ARCHETYPE 1: ORGANIC & EARTHY. Calming, growth-oriented feel suitable for a habit building and community discussion platform.",
+  "colors": {
+    "background": "#F9F9F6",
+    "surface": "#FFFFFF",
+    "primary": "#4A6B56",
+    "primary_hover": "#3C5745",
+    "secondary": "#E3A387",
+    "text_main": "#262D29",
+    "text_muted": "#69746D",
+    "border": "#E5E7E2",
+    "success": "#4A6B56",
+    "danger": "#D95E5E"
+  },
+  "typography": {
+    "headings": "Manrope (font-sans). Do not use Inter for headings. Use tracking-tight for H1/H2 to provide tension and character.",
+    "body": "IBM Plex Sans or standard clean sans. Must be highly legible for comment threads and textareas.",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl tracking-tight text-[#262D29]",
+      "h2": "text-2xl sm:text-3xl tracking-tight text-[#262D29]",
+      "h3": "text-xl font-medium",
+      "body": "text-base text-[#262D29] leading-relaxed",
+      "labels": "text-xs uppercase tracking-[0.2em] text-[#69746D]"
+    }
+  },
+  "layouts": {
+    "global": "Sidebar layout on desktop (256px width), top nav + hamburger menu on mobile. Main content area must have generous padding (p-8 or p-12) to prevent a cramped feeling.",
+    "header": "Sticky header for mobile with backdrop-blur-xl bg-white/70 and 1px bottom border (border-[#E5E7E2]). Never fully transparent if content scrolls beneath.",
+    "sidebar": "Solid surface background (#FFFFFF) with a right border. Contains links to 'My habits', 'Community', and a 'Sign out' button at the bottom.",
+    "habit_list": "High-density Bento grid layout (grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6).",
+    "habit_detail": "Bento-style layout. Header spanning full width, 7-day checkboxes inside a dedicated 'Tactile' neumorphic or subtly bordered card to signify interactivity.",
+    "community_feed": "Single column feed layout (max-w-2xl mx-auto) to optimize reading comments and discussions. Generous vertical spacing between shared habits."
+  },
+  "visual_enhancers": {
+    "surfaces": "Use 'Tactile' Variant: Flat solid backgrounds with 1px subtle borders (border-black/5) and very soft ambient shadow (shadow-sm). Do not overuse heavy drop shadows.",
+    "radius": "Generous rounded corners: rounded-2xl for main cards, rounded-full for buttons."
+  },
+  "motion": {
+    "hover": "Interactive cards lift slightly (-translate-y-1) with a shadow increase. Buttons darken and scale down slightly (scale-95) on press.",
+    "page_transitions": "Subtle opacity and translate-y fade in for main content areas.",
+    "lists": "Staggered entrance animations for habit list items."
+  },
+  "components": {
+    "button": "Pill-shaped (rounded-full), solid colors. Primary CTA in Sage Green (#4A6B56).",
+    "inputs": "Shadcn inputs customized with soft focus rings (focus:ring-2 focus:ring-[#4A6B56]/30).",
+    "checkboxes": "Large, tactile checkboxes for the 7-day tracker. Check color: Sage Green. Essential for satisfaction when completing a habit.",
+    "cards": "Flat, rectangular, 1px border. Padding must be generous (p-6 or p-8).",
+    "navigation": "Active states in sidebar should have a soft background (bg-[#F0F2ED]) and bold text."
+  },
+  "accessibility": {
+    "contrast": "Ensure text colors meet APCA/WCAG standards against backgrounds.",
+    "focus": "All interactive elements must have clear focus rings.",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='sign-in-button', data-testid='habit-item-123', data-testid='comment-input')."
+  },
+  "media": {
+    "images": "No external images required per 'keep it simple' constraint. Rely purely on typography, spacing, and UI components."
+  },
+  "3d_libraries": {
+    "status": "Not required for this application."
+  },
+  "image_urls": {},
+  "instructions_to_main_agent": [
+    "Build the UI in React using .js files (not .tsx) and Tailwind CSS.",
+    "Strictly adhere to the Earthy/Organic color palette.",
+    "Implement the Layout with a Sidebar containing 'My habits', 'Community', and 'Sign out' buttons.",
+    "Create the 'My habits' page featuring an add form (Habit name, When I do it, Share checkbox) and a list of habits showing their Shared/Private status.",
+    "Create the 'Habit detail' page with the 7-day trailing checklist (labeled with dates YYYY-MM-DD), 'Days done', and 'Current streak'.",
+    "Create the 'Community' page displaying shared habits and a commenting system.",
+    "Use Shadcn UI for forms, inputs, buttons, and checkboxes, heavily customizing them to remove default styles.",
+    "Do NOT add any unrequested features (like avatars, complex user profiles, external integrations)."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid generic, 'on distribution' outputs. Create depth through layered design elements with z-index hierarchy.",
+    "Do not use dark colors as gradients. Do not apply universal transition (e.g., transition: all).",
+    "Do not center align the app container (.App { text-align: center; } is banned). Left-align for better readability.",
+    "Every interaction needs micro-animations - hover states, transitions. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Use modern pill-shaped or rounded-2xl button styles.",
+    "Use lucide-react for icons.",
+    "Use sonner for toast notifications.",
+    "Prioritize using pre-existing components from src/components/ui. Create new .js components when needed."
+  ]
+}
