@@ -35,7 +35,7 @@ function App() {
           <Route path="*" element={<Navigate to="/my-habits" replace />} />
         </Routes>
       </BrowserRouter>
-      <Toaster position="top-right" />
+      <Toaster position="bottom-right" />
     </AuthProvider>
   );
 }
